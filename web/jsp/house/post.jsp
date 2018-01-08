@@ -14,30 +14,17 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../bootstrap-3.3.7/docs/favicon.ico">
+    <link rel="icon" href="../../docs/favicon.ico">
     <title>发布页面</title><!--//显示title。-->
     <!-- Bootstrap core CSS -->
     <link href="../../css/bootstrap.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../bootstrap-3.3.7/docs/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 <body>
 <script src="../../js/jquery-1.12.4.js"></script>
 <script src="../../js/bootstrap.js"></script>
 <script type="text/javascript" src="../../js/wangEditor.js"></script>
 
-<%@ include file="../../common/header.jsp"%>
+
 <script type="text/javascript">
     $(function () {
         var E = window.wangEditor;
@@ -49,44 +36,44 @@
 <%--<div class="col-md-12 hidden-xs">顶部栏
 </div>--%>
 <div class="container">
+    <header>
+        <%@ include file="../../common/header.jsp"%>
+    </header>
     <form class="form-horizontal" method="post" action="">
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">出租方式：</label>
+            <div class="btn-group col-sm-2" data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input type="radio" name="status" id="option2" autocomplete="off"> 整租
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="status" id="option3" autocomplete="off"> 合租
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="streetAddress" class="col-sm-2 control-label">区域：</label>
+
+        </div>
         <div class="form-group">
             <label for="streetAddress" class="col-sm-2 control-label">街道名称：</label>
+
         </div>
         <div class="form-group">
             <label for="Address" class="col-sm-2 control-label">详细地址：</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="Address" placeholder="请输入详细地址：" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="chamber" class="col-sm-2 control-label">房屋户型：</label>
-            <div class="col-sm-2">
-                <div class="input-group">
-                <input type="text" class="form-control " id="chamber" placeholder="" required>
-                    <div class="input-group-addon" >室</div>
-                </div>
-            </div>
-            <div class="col-sm-2 ">
-                <div class="input-group">
-                <input type="text" class="form-control" id="hall" placeholder="" required>
-                    <div class="input-group-addon " >厅</div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="input-group">
-                <input type="text" class="form-control" id="bath" placeholder="" required>
-                <div class="input-group-addon " >卫</div>
-                </div>
+                <input type="text" class="form-control" id="Address" placeholder="请输入详细地址" required>
             </div>
         </div>
         <div class="form-group ">
             <label for="floor" class="col-sm-2 control-label">楼层分布：</label>
             <div class="col-sm-2">
                 <div class="input-group">
-                <input type="text" class="form-control" id="floor"  required>
-                <div class="input-group-addon " >楼</div>
-            </div>
+                    <input type="text" class="form-control" id="floor"  required>
+                    <div class="input-group-addon " >楼</div>
+                </div>
             </div>
             <label for="direction" class="col-sm-1 control-label">朝向：</label>
             <div class="col-sm-2">
@@ -104,13 +91,40 @@
                     <option value="westnorth">西北</option>
                 </select>
             </div>
+            <label for="area" class="col-sm-1 control-label">面积：</label>
+            <div class="col-sm-2" >
+                <div class="input-group">
+                    <input type="text" class="form-control" id="area"  required>
+                    <div class="input-group-addon " >㎡</div>
+                </div>
+            </div>
         </div>
-
+        <div class="form-group">
+            <label for="chamber" class="col-sm-2 control-label">房屋户型：</label>
+            <div class="col-sm-2">
+                <div class="input-group">
+                    <input type="text" class="form-control " id="chamber" placeholder="" required>
+                    <div class="input-group-addon" >室</div>
+                </div>
+            </div>
+            <div class="col-sm-2 ">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="hall" placeholder="" required>
+                    <div class="input-group-addon " >厅</div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="bath" placeholder="" required>
+                    <div class="input-group-addon " >卫</div>
+                </div>
+            </div>
+        </div>
         <div class="form-group ">
             <label for="rent" class="col-sm-2 control-label">租金：</label>
             <div class="col-sm-2">
                 <div class="input-group">
-                <input type="text" class="form-control" id="rent" placeholder="" required>
+                    <input type="text" class="form-control" id="rent" placeholder="" required>
                     <div class="input-group-addon " >￥</div>
                 </div>
             </div>
@@ -118,15 +132,15 @@
 
             <label for="model" class="col-sm-2 control-label">付款方式：</label>
             <div class="col-sm-2 ">
-            <select id="model" class="form-control ">
-                <option value="day">日付</option>
-                <option value="week">周付</option>
-                <option value="1by1">押一付一</option>
-                <option value="1by3">押一付三</option>
-                <option value="halfyear">半年交</option>
-                <option value="1year">一年交</option>
-                <option value="face">面议</option>
-            </select>
+                <select id="model" class="form-control ">
+                    <option value="day">日付</option>
+                    <option value="week">周付</option>
+                    <option value="1by1">押一付一</option>
+                    <option value="1by3">押一付三</option>
+                    <option value="halfyear">半年交</option>
+                    <option value="1year">一年交</option>
+                    <option value="face">面议</option>
+                </select>
             </div>
         </div>
         <div class="form-group">
@@ -140,9 +154,10 @@
             <div class="col-sm-8" id="editor">
             </div>
         </div>
-
-
-
+        <div class="form-group" >
+            <label for="HousePic" class="col-sm-2 control-label">上传照片：</label>
+            <input type="file" id="HousePic" class="col-sm-8">
+        </div>
 
 
         <div class="form-group">
