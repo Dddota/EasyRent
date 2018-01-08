@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>
+  <servlet>
+  <servlet-name>UserServlet</servlet-name>
+  <servlet-class>cn.easyrent.web.backend.UserServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>UserServlet</servlet-name>
+  <url-pattern>/UserServlet</url-pattern>
+  
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HouseServlet</servlet-name>
+    <servlet-class>cn.easyrent.web.backend.HouseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>cn.easyrent.web.backend.OrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddressServlet</servlet-name>
+    <servlet-class>cn.easyrent.web.backend.AddressServlet</servlet-class>
+  </servlet>
+
+
+
+  <servlet-mapping>
+    <servlet-name>HouseServlet</servlet-name>
+    <url-pattern>/HouseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/OrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddressServlet</servlet-name>
+    <url-pattern>/AddressServlet</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
