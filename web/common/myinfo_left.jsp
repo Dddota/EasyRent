@@ -19,6 +19,8 @@
     </style>
 </head>
 <body>
+<script src="../../js/jquery-1.12.4.js"></script>
+<script src="../../js/bootstrap.js"></script>
     <div class="hidden-sm hidden-xs text-center">
     <dl>
         <dd>个人中心</dd>
@@ -30,10 +32,10 @@
 
         <dd>账户设置</dd>
 
-        <dd><a href="#">个人资料</a></dd>
-        <dd><a href="#">修改密码</a></dd>
-        <dd><a href="#">实名认证</a></dd>
-        <dd><a href="#">帐号绑定</a></dd>
+        <dd><a href="javascript:" id="gerenziliao">个人资料</a></dd>
+        <dd><a href="javascript:" id="xiugaimima">修改密码</a></dd>
+        <dd><a href="javascript:" id="shimingrenzheng">实名认证</a></dd>
+        <dd><a href="javascript:">帐号绑定</a></dd>
     </dl>
     </div>
     <div class="col-xs-12 ">

@@ -10,7 +10,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../../bootstrap-3.3.7/docs/favicon.ico">
+    <link rel="icon" href="../../docs/favicon.ico">
     <title>检查是否实名验证</title>
     <link href="../../css/bootstrap.css" rel="stylesheet">
 </head>
@@ -31,7 +31,7 @@
                 <input type="text" name="idcard" class="form-control" id="idcard" placeholder="15位或18位身份证号码">
             </div>
         </div>
-        <div class="col-sm-offset-2 col-sm-10 text-center">
+        <div class="col-sm-offset-2 col-sm-10 ">
             <button type="submit" id="submit" class="btn btn-default btn-lg">提交</button>
         </div>
     </form>

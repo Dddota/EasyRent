@@ -74,8 +74,6 @@
                 <dd class="model">不限&nbsp;&nbsp;&nbsp;&nbsp;</dd>
                 <dd class="model"><a href="javascript:;" onclick="">整套出租</a>&nbsp;&nbsp;&nbsp;&nbsp;</dd>
                 <dd class="model"><a href="javascript:;" onclick="">单间出租</a>&nbsp;&nbsp;&nbsp;&nbsp;</dd>
-                <dt class="title">其他：</dt>
-                <dd class="">朝向</dd>
 
             </dl>
         </div>

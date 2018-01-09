@@ -19,30 +19,21 @@
     <meta http-equiv="description" content="This is my page">
 
     <!-- Bootstrap core CSS -->
-    <link href="../../bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
 
     <!-- Custom styles for this template -->
     <link  rel="stylesheet" type="text/css" href="../../css/regin.css">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="bootstrap-3.3.7/docs/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js"></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
         <%
-	QuestionDaoService questionDaoService = new QuestionDaoServiceImpl();
-	List<Question> questionList = questionDaoService.showAllQuestion();
-	 %>
+            QuestionDaoService questionDaoService = new QuestionDaoServiceImpl();
+            List<Question> questionList = questionDaoService.showAllQuestion();
+%>
 <body>
-<script src="js/jquery-1.12.4.js"></script>
-<script src="bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+<script src="../../js/jquery-1.12.4.js"></script>
+<script src="../../js/bootstrap.js"></script>
 <div class="container img-responsive" style="background-image: url(../../img/background.jpg);background-repeat: no-repeat;background-position: bottom" >
     <form class="form-regin" method="post" action="/EasyRent/UserServlet?opr=register">
         <div class="form-group">

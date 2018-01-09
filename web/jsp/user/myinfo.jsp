@@ -10,6 +10,16 @@
 <head>
     <title>我的信息</title>
     <link href="../../css/bootstrap.css" rel="stylesheet">
+    <style>
+        #right >div{
+            display: none;
+        }
+        .dianzhong{
+            display: block;
+        }
+
+
+    </style>
 </head>
 <body>
 <script src="../../js/jquery-1.12.4.js"></script>
@@ -24,10 +34,13 @@
             <%@ include file="../../common/search.jsp" %>
         </div>
     <div class="col-lg-3 col-md-3">
-    <%@ include file="../../common/myinfo_left.jsp" %>
+        <%@ include file="../../common/myinfo_left.jsp" %>
     </div>
-    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-        右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧右侧
+    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" id="right">
+        <div id="checkReal"><%@ include file="checkReal.jsp" %></div>
+        <div id="profile"><%@ include file="profile.jsp" %></div>
+        <div id="changePassword"><%@ include file="changePassword.jsp" %></div>
+        <%--<div id=""><%@ include file="" %></div>--%>
     </div>
     </section>
     </div>
@@ -35,5 +48,27 @@
 <footer>
     <%@ include file="../../common/footer.jsp" %>
 </footer>
+<script type="text/javascript">
+    $(function () {
+        var checkreal=$("#checkReal");
+        var profile=$("#profile");
+        var changepwd= $("#changePassword");
+        $("#gerenziliao").click(function () {
+           checkreal.siblings().hide();
+           checkreal.show();
+        });
+        $("#xiugaimima").click(function () {
+            profile.siblings().hide()
+            profile.show();
+        });
+        $("#shimingrenzheng").click(function () {
+            changepwd.siblings().hide();
+            changepwd.show();
+        });
+
+    })
+
+</script>
 </body>
+
 </html>

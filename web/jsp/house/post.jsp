@@ -128,11 +128,10 @@
                     <div class="input-group-addon " >￥</div>
                 </div>
             </div>
-
-
             <label for="model" class="col-sm-2 control-label">付款方式：</label>
             <div class="col-sm-2 ">
                 <select id="model" class="form-control ">
+                    <option value="" selected></option>
                     <option value="day">日付</option>
                     <option value="week">周付</option>
                     <option value="1by1">押一付一</option>
@@ -156,31 +155,28 @@
         </div>
         <div class="form-group" >
             <label for="HousePic" class="col-sm-2 control-label">上传照片：</label>
-            <input type="file" id="HousePic" class="col-sm-8">
+            <input type="file" id="HousePic" class="col-sm-2">
         </div>
-
-
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" class="btn btn-default">发布</button>
             </div>
         </div>
     </form>
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 <div>
     <%@ include file="../../common/footer.jsp"%>
 </div>
+<script>
+    $(function () {
+
+        $("#model").blur(function () {
+            var cid=$("#model option:selected").val();
+            alert(cid)
+        })
+    })
+
+
+</script>
 </body>
 </html>

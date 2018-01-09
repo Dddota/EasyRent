@@ -27,7 +27,7 @@
 <body>
 <script src="../../js/jquery-1.12.4.js"></script>
 <script src="../../js/bootstrap.js"></script>
-<script src="/EasyRent/js/bootstrap-hover-dropdown.js"></script>
+<script src="../../js/bootstrap-hover-dropdown.js"></script>
 <div class="row">
 <div class="col-md-12  col-lg-12 col-sm-12 hidden-xs">
     <div class="col-md-3 col-lg-3 text-center">

@@ -9,8 +9,11 @@
 <html>
 <head>
     <title>Title</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-
+<script src="../js/jquery-1.12.4.js"></script>
+<script src="../js/bootstrap.js"></script>
+<i class="glyphicon glyphicon-alert" aria-hidden="true"></i>
 </body>
 </html>
